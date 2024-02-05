@@ -26,28 +26,22 @@ const todoList = {
   add: function (text) {
     const obj = {
       text: text,
-      completed: false
-    }
-    return this.items.unshift(obj)
+      completed: false,
+    };
+    return this.items.unshift(obj);
   },
 
   remove: function (index) {
-      
-        this.items.splice([index], 1)
-      
+    this.items.splice([index], 1);
   },
 
   print: function (index) {
     if (this.items[index].completed === true) {
-       console.log(`[ ] ${this.items[index].text}`);
+      console.log(`[ ] ${this.items[index].text}`);
     } else console.log(`[ x ] ${this.items[index].text}`);
   },
 
   complete: function (index) {
-     this.items[index].completed = true;
+    this.items[index].completed = true;
   },
 };
-
-todoList.remove(1)
-
-todoList.printAll(todoList.items)
